@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Smart Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>Personal Smart Dashboard</h1>
+            <p class="app-subtitle">Built with JS</p>
+        </header>
+
+        <main class="dashboard">
+            <!-- Notes Widget  -->
+            <section class="card" id="notes-widget">
+                <h2>Notes</h2>
+                <form action="notes-form" data-note-form>
+                    <input 
+                        type="text"
+                        class="notes-input"
+                        data-note-form
+                        placeholder="Write a note and press Enter..."
+                        required
+                    />
+                    <button type="submit">Add</button>
+                </form>
+                <ul class="notes-list" data-note-list></ul>
+            </section>
+
+            <!-- More Widget  -->
+            <section>
+                <h2>Coming Soon</h2>
+                <p>Todos, Bookmarks, Weather, Quotes...</p>
+            </section>
+        </main>
+    </div>
+    <script type="module" src=".src/app.js"></script>
+</body>
+</html>
