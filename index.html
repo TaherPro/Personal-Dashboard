@@ -14,28 +14,28 @@
         </header>
 
         <main class="dashboard">
-            <!-- Notes Widget  -->
-            <section class="card" id="notes-widget">
-                <h2>Notes</h2>
-                <form action="notes-form" data-note-form>
-                    <input 
-                        type="text"
-                        class="notes-input"
-                        data-note-form
-                        placeholder="Write a note and press Enter..."
-                        required
-                    />
-                    <button type="submit">Add</button>
-                </form>
-                <ul class="notes-list" data-note-list></ul>
-            </section>
+        <!-- Notes Widget -->
+        <section class="card" id="notes-widget">
+          <h2>Notes</h2>
+          <form class="notes-form" data-note-form>
+            <input
+              type="text"
+              class="notes-input"
+              data-note-input
+              placeholder="Write a note and press Enter..."
+              required
+            />
+            <button type="submit">Add</button>
+          </form>
+          <ul class="notes-list" data-notes-list></ul>
+        </section>
 
-            <!-- More Widget  -->
-            <section>
-                <h2>Coming Soon</h2>
-                <p>Todos, Bookmarks, Weather, Quotes...</p>
-            </section>
-        </main>
+        <!-- More widgets will go here later (Todos, Bookmarks, etc.) -->
+        <section class="card placeholder">
+          <h2>Coming Soon</h2>
+          <p>Todos, Bookmarks, Weather, Quotes...</p>
+        </section>
+      </main>
     </div>
     <script type="module" src=".src/app.js"></script>
 </body>
