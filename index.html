@@ -30,6 +30,29 @@
           <ul class="notes-list" data-notes-list></ul>
         </section>
 
+        <!-- Todo Widget -->
+        <section class="card" id="todo-widget">
+            <h2>Todo List</h2>
+
+            <form action="todo-form" data-todo-form>
+                <input 
+                    type="text"
+                    class="todo-input"
+                    data-note-input
+                    placeholder="Add a Task.."
+                    required
+                />
+                <button type="submit">Add</button>
+            </form>
+
+            <div class="todo-filters">
+                <button data-filter="all" class="action">All</button>
+                <button data-filter="active">Active</button>
+                <button data-filter="completed">Completed</button>
+            </div>
+
+            <ul class="todo-list" data-todo-list></ul>
+        </section>
         <!-- More widgets will go here later (Todos, Bookmarks, etc.) -->
         <section class="card placeholder">
           <h2>Coming Soon</h2>
@@ -37,6 +60,6 @@
         </section>
       </main>
     </div>
-    <script type="module" src=".src/app.js"></script>
+    <script type="module" src="./src/app.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import { NotesManager } from "./modules/notes.js";
+import { NotesManager } from "./src/modules/notes.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const notesWidget = document.getElementById("notes-widget");

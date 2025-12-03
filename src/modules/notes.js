@@ -1,4 +1,4 @@
-// src/modules/notes.js
+
 import { StorageService } from "./storage.js";
 
 const STORAGE_KEY = "dashboard:notes";
