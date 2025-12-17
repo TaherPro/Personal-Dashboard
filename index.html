@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Smart Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="app">
-        <header class="app-header">
-            <h1>Personal Smart Dashboard</h1>
-            <p class="app-subtitle">Built with JS</p>
-        </header>
+      <header class="app-header">
+        <h1>Personal Smart Dashboard</h1>
+        <p class="app-subtitle">Built with JS</p>
+      </header>
 
-        <main class="dashboard">
+      <main class="dashboard">
         <!-- Notes Widget -->
         <section class="card" id="notes-widget">
           <h2>Notes</h2>
@@ -32,27 +32,63 @@
 
         <!-- Todo Widget -->
         <section class="card" id="todo-widget">
-            <h2>Todo List</h2>
+          <h2>Todo List</h2>
 
-            <form action="todo-form" data-todo-form>
-                <input 
-                    type="text"
-                    class="todo-input"
-                    data-note-input
-                    placeholder="Add a Task.."
-                    required
-                />
-                <button type="submit">Add</button>
-            </form>
+          <form class="todo-form" data-todo-form>
+            <input
+              type="text"
+              class="todo-input"
+              data-todo-input
+              placeholder="Add a task..."
+              required
+            />
+            <button type="submit">Add</button>
+          </form>
 
-            <div class="todo-filters">
-                <button data-filter="all" class="action">All</button>
-                <button data-filter="active">Active</button>
-                <button data-filter="completed">Completed</button>
-            </div>
+          <div class="todo-filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="active">Active</button>
+            <button data-filter="completed">Completed</button>
+          </div>
 
-            <ul class="todo-list" data-todo-list></ul>
+          <ul class="todo-list" data-todo-list></ul>
         </section>
+
+        <!-- Bookmarks Widget -->
+        <section class="card" id="bookmarks-widget">
+          <h2>Bookmarks</h2>
+
+          <form class="bookmark-form" data-bookmark-form>
+            <input
+              type="text"
+              class="bookmark-input"
+              data-bookmark-title
+              placeholder="Title (JavaScript)"
+              required
+            />
+            <input
+              type="url"
+              class="bookmark-input"
+              data-bookmark-url
+              placeholder="https://example.com"
+              required
+            />
+            <input
+              type="text"
+              class="bookmark-input"
+              data-bookmark-category
+              placeholder="Category (Work, Learn)"
+            />
+            <button type="submit">Save</button>
+          </form>
+
+          <ul class="bookmark-list" data-bookmark-list></ul>
+
+          <p class="bookmark-summary" data-bookmark-summary>
+            No bookmarks yet.
+          </p>
+        </section>
+
         <!-- More widgets will go here later (Todos, Bookmarks, etc.) -->
         <section class="card placeholder">
           <h2>Coming Soon</h2>
@@ -60,6 +96,6 @@
         </section>
       </main>
     </div>
-    <script type="module" src="./src/app.js"></script>
-</body>
+    <script type="module" src="./dist/app.js"></script>
+  </body>
 </html>
