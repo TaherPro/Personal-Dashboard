@@ -1,3 +1,31 @@
+/* ================================
+   THEME VARIABLES
+================================ */
+:root {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-color: #111827;
+  --muted-text: #6b7280;
+  --border-color: #e5e7eb;
+
+  --primary: #7c3aed;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #0ea5e9;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #020617;
+  --text-color: #e5e7eb;
+  --muted-text: #9ca3af;
+  --border-color: #1e293b;
+}
+
+/* ================================
+   BASE STYLES
+================================ */
 *,
 *::before,
 *::after {
@@ -8,8 +36,8 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background: #f3f4f6;
-  color: #111827;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .app {
@@ -30,10 +58,13 @@ body {
 
 .app-subtitle {
   margin: 0.25rem 0 0;
-  color: #6b7280;
+  color: var(--muted-text);
   font-size: 0.95rem;
 }
 
+/* ================================
+   DASHBOARD LAYOUT
+================================ */
 .dashboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -42,10 +73,10 @@ body {
 }
 
 .card {
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: 0.75rem;
   padding: 1.25rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card h2 {
@@ -54,7 +85,9 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* Notes widget styles */
+/* ================================
+   NOTES WIDGET
+================================ */
 .notes-form {
   display: flex;
   gap: 0.5rem;
@@ -65,22 +98,18 @@ body {
   flex: 1;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
-  border: 1px solid #d1d5db;
-  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
 }
 
 .notes-form button {
   padding: 0.5rem 0.9rem;
   border-radius: 0.5rem;
   border: none;
-  background: #7c3aed;
+  background: var(--primary);
   color: white;
-  font-size: 0.9rem;
   cursor: pointer;
-}
-
-.notes-form button:hover {
-  background: #1d4ed8;
 }
 
 .notes-list {
@@ -95,43 +124,35 @@ body {
   align-items: center;
   padding: 0.4rem 0.55rem;
   border-radius: 0.45rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   margin-bottom: 0.4rem;
-  font-size: 0.95rem;
-}
-
-.notes-list li span {
-  flex: 1;
-  margin-right: 0.5rem;
-  word-break: break-word;
 }
 
 .notes-list button {
   border: none;
-  background: #ef4444;
+  background: var(--danger);
   color: white;
   border-radius: 999px;
   padding: 0.2rem 0.55rem;
-  font-size: 0.75rem;
   cursor: pointer;
 }
 
-.notes-list button:hover {
-  background: #b91c1c;
+/* ================================
+   TODO WIDGET
+================================ */
+.todo-list li {
+  border: 1px solid var(--border-color);
 }
 
-/* Placeholder card */
-.placeholder {
-  text-align: center;
-  color: #6b7280;
+.todo-list li.completed {
+  color: var(--muted-text);
 }
 
-/* Todo Widget */
-
-/* Bookmarks Widget */
+/* ================================
+   BOOKMARKS WIDGET
+================================ */
 .bookmark-form {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 0.4rem;
   margin-bottom: 0.75rem;
 }
@@ -139,146 +160,92 @@ body {
 .bookmark-input {
   padding: 0.45rem 0.7rem;
   border-radius: 0.5rem;
-  border: 1px solid #d1d5db;
-  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
 }
 
 .bookmark-form button {
-  justify-self: flex-start;
+  background: var(--primary);
+  color: white;
+  border: none;
   padding: 0.45rem 0.9rem;
   border-radius: 0.5rem;
-  border: none;
-  background: #7c3aed;
-  color: white;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.bookmark-form button:hover {
-  background: #6d28d9;
-}
-
-.bookmark-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .bookmark-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.45rem 0.6rem;
-  border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  margin-bottom: 0.4rem;
-  font-size: 0.9rem;
-}
-
-.bookmark-main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  flex: 1;
-}
-
-.bookmark-title {
-  font-weight: 600;
+  border: 1px solid var(--border-color);
 }
 
 .bookmark-url {
-  font-size: 0.8rem;
-  color: #2563eb;
-  word-break: break-all;
+  color: var(--info);
 }
 
-.bookmark-meta {
-  font-size: 0.75rem;
-  color: #6b7280;
+.bookmark-meta,
+.bookmark-summary {
+  color: var(--muted-text);
 }
 
 .bookmark-delete {
-  border: none;
-  background: #ef4444;
+  background: var(--danger);
   color: white;
+  border: none;
   border-radius: 999px;
-  padding: 0.2rem 0.55rem;
-  font-size: 0.75rem;
-  cursor: pointer;
 }
 
-.bookmark-delete:hover {
-  background: #b91c1c;
-}
-
-.bookmark-summary {
-  margin-top: 0.4rem;
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-
-/* Quotes Widget */
+/* ================================
+   QUOTES WIDGET
+================================ */
 .quote-text {
-  font-size: 1rem;
   font-style: italic;
-  margin-bottom: 0.5rem;
 }
 
 .quote-author {
-  font-size: 0.85rem;
-  color: #6b7280;
-  margin-bottom: 0.75rem;
+  color: var(--muted-text);
 }
 
 .quote-btn {
-  padding: 0.45rem 0.9rem;
-  border-radius: 0.5rem;
-  background: #f59e0b;
+  background: var(--warning);
   color: white;
   border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.quote-btn:hover {
-  background: #d97706;
-}
-
-/* Weather Widget */
-.weather-row {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.weather-input {
-  flex: 1;
-  padding: 0.5rem 0.75rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 0.5rem;
-  border: 1px solid #d1d5db;
+}
+
+/* ================================
+   WEATHER WIDGET
+================================ */
+.weather-input {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
 }
 
 .weather-btn {
-  padding: 0.5rem 0.9rem;
-  border-radius: 0.5rem;
-  background: #0ea5e9;
+  background: var(--info);
   color: white;
   border: none;
-  cursor: pointer;
-}
-
-.weather-btn:hover {
-  background: #0284c7;
+  border-radius: 0.5rem;
 }
 
 .weather-status {
-  color: #6b7280;
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
+  color: var(--muted-text);
 }
 
-.weather-info p {
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
+/* ================================
+   THEME SWITCHER
+================================ */
+.theme-toggle {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.theme-status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted-text);
 }
