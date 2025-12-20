@@ -9,7 +9,7 @@ This project demonstrates modern frontend development concepts.
 
 **Notes Manager**
   - Add and delete notes
-  - Persistent storage using `localStorage`
+  - Persistent storage
 
 **Todo List**
   - Add, complete, delete tasks
@@ -17,8 +17,8 @@ This project demonstrates modern frontend development concepts.
 
 **Bookmarks Manager**
   - Save bookmarks with title, URL, and category
-  - Prevent duplicate URLs using `Set`
-  - Category summary using `Map`
+  - Prevent duplicate URLs 
+  - Category summary 
 
 **Random Quotes**
   - Fetch random quotes from a public API
@@ -31,8 +31,8 @@ This project demonstrates modern frontend development concepts.
 
 **Light / Dark Theme Switcher**
   - Implemented with CSS variables
-  - Theme persisted in `localStorage`
-  - Built using TypeScript `enum`
+  - Theme persisted 
+  - Built using TypeScript 
 
 ------
 
