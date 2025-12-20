@@ -34,7 +34,7 @@ This project demonstrates modern frontend development concepts.
   - Theme persisted in `localStorage`
   - Built using TypeScript `enum`
 
----
+------
 
 ## Tech Stack
 
@@ -45,3 +45,4 @@ This project demonstrates modern frontend development concepts.
 - **CSS3 (CSS Variables for theming)**
 - **LocalStorage**
 - **Fetch API**
+
