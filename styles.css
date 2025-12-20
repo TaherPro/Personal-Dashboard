@@ -244,3 +244,41 @@ body {
 .quote-btn:hover {
   background: #d97706;
 }
+
+/* Weather Widget */
+.weather-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.weather-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.weather-btn {
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.weather-btn:hover {
+  background: #0284c7;
+}
+
+.weather-status {
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.weather-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}

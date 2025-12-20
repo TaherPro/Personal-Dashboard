@@ -1,4 +1,3 @@
-// src/modules/quotes.ts
 export class QuotesManager {
     constructor(rootElement) {
         this.root = rootElement;

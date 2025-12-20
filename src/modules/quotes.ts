@@ -1,5 +1,3 @@
-// src/modules/quotes.ts
-
 // API returns this shape
 interface QuoteApi {
   content: string;

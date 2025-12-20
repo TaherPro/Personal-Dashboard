@@ -102,6 +102,35 @@
           <button class="quote-btn" data-quote-btn>New Quote</button>
         </section>
 
+        <!-- Weather Widget -->
+        <section class="card" id="weather-widget">
+          <h2>Weather</h2>
+
+          <div class="weather-row">
+            <input
+              type="text"
+              placeholder="Enter city..."
+              class="weather-input"
+              data-weather-input
+            />
+            <button class="weather-btn" data-weather-btn>Get Weather</button>
+          </div>
+
+          <p class="weather-status" data-weather-status>
+            Enter a city to get the weather.
+          </p>
+
+          <div class="weather-info" data-weather-info style="display: none">
+            <p>
+              <strong>Temperature:</strong> <span data-weather-temp></span>°C
+            </p>
+            <p>
+              <strong>Windspeed:</strong> <span data-weather-wind></span> km/h
+            </p>
+            <p><strong>Condition:</strong> <span data-weather-desc></span></p>
+          </div>
+        </section>
+
         <!-- More widgets will go here later (Todos, Bookmarks, etc.) -->
         <section class="card placeholder">
           <h2>Coming Soon</h2>
